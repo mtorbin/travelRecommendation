@@ -75,3 +75,40 @@ button {
     border: none;
     border-radius: 8px;
 }
+
+.image-container {
+  position: relative; /* Makes the container the reference point for absolute positioning */
+  display: inline-block; /* Helps wrap the container around the image */
+}
+
+.image-container img {
+  display: block;
+  width: 100%; /* Ensures the image is responsive within the container */
+  height: auto;
+}
+
+.overlay-text-title {
+  position: absolute; /* Positions the text relative to the container */
+  top: 27%; /* Centers the text vertically */
+  left: 25%; /* Centers the text horizontally */
+  transform: translate(-50%, -50%); /*Adjusts position to perfectly center the text */
+  color: white; /* Styles the text */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4); /* Adds a semi-transparent background for readability */
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.overlay-text-description {
+  position: absolute; /* Positions the text relative to the container */
+  top: 45%; /* Centers the text vertically */
+  left: 22%; /* Centers the text horizontally */
+  transform: translate(-50%, -50%); /*Adjusts position to perfectly center the text */
+  color: white; /* Styles the text */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4); /* Adds a semi-transparent background for readability */
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
