@@ -67,18 +67,31 @@ ul#searchBar input {
     margin-right: 15px;
     margin-left: 15px;
     border: none;
+    outline: none;
+}
+
+.search_icon {
+  margin-top: 10px;
+  width: 25px;
+  height: auto;
 }
 
 button {
     background-color: #3c8278;
+    color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 8px;
+    font-size: 14px;
+}
+
+button:hover {
+  background-color: #2e5939;
 }
 
 .image-container {
   position: relative; /* Makes the container the reference point for absolute positioning */
-  display: inline-block; /* Helps wrap the container around the image */
+  display: inline-block; /*Helps wrap the container around the image */
 }
 
 .image-container img {
@@ -89,26 +102,55 @@ button {
 
 .overlay-text-title {
   position: absolute; /* Positions the text relative to the container */
-  top: 27%; /* Centers the text vertically */
-  left: 25%; /* Centers the text horizontally */
-  transform: translate(-50%, -50%); /*Adjusts position to perfectly center the text */
-  color: white; /* Styles the text */
+  top: 13%; 
+  left: 11%; 
+  /* transform: translate(-50%, -50%); */
+  color: white;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4); /* Adds a semi-transparent background for readability */
+  background-color: rgb(0 0 0 / 0);
   font-family: Arial, sans-serif;
   font-size: 80px;
   font-weight: bolder;
 }
 
 .overlay-text-description {
-  position: absolute; /* Positions the text relative to the container */
-  top: 45%; /* Centers the text vertically */
-  left: 22%; /* Centers the text horizontally */
-  transform: translate(-50%, -50%); /*Adjusts position to perfectly center the text */
-  color: white; /* Styles the text */
+  position: absolute;
+  top: 42%; 
+  left: 11%; 
+  color: white;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.4); /* Adds a semi-transparent background for readability */
+  background-color: rgb(0 0 0 / 0.2); 
   font-family: Arial, sans-serif;
   font-size: 20px;
   font-weight: bolder;
+}
+
+.social-media {
+  position: absolute; 
+  top: 35%;
+  left: 3%;
+  color: white; 
+  padding: 1px;
+  width: 60px;
+  height: auto;
+  /* background-color: black; */
+}
+
+.social-media-img {
+  margin-bottom: 20px;
+  width: 25px;
+  height: auto;
+  border-radius: 11px;
+  opacity: 0.8;
+}
+
+.overlay-button {
+  width: 10%;
+  height: 5%;
+  position: absolute; 
+  top: 60%; 
+  left: 12%; 
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 15px;
 }
