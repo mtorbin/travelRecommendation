@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #2f3630;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+nav h1 {
+    margin: 5px 550px 5px 15px;
+    color: white;
+    font-style: italic;
+}
+  
+nav ul {
+  list-style-type: none;
+  /* padding: 0; */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+ul#links {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-right: 630px;
+}
+
+ul#searchBar {
+    background-color: white;
+    width: 500px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+
+ul#searchBar input {
+    width: 250px;
+    height: 25px;
+    font-size: 16px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: none;
+    outline: none;
+}
+
+.search_icon {
+  margin-top: 10px;
+  width: 25px;
+  height: auto;
+}
+
+button {
+    background-color: #3c8278;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button:hover {
+  background-color: #2e5939;
+}
+
+.image-container {
+  position: relative; /* Makes the container the reference point for absolute positioning */
+  display: inline-block; /*Helps wrap the container around the image */
+}
+
+.image-container img {
+  display: block;
+  width: 100%; /* Ensures the image is responsive within the container */
+  height: auto;
+}
+
+.overlay-text-about {
+  position: absolute; /* Positions the text relative to the container */
+  top: 8%; 
+  left: 11%; 
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  padding: 10px;
+  background-color: rgb(0 0 0 / 0);
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.overlay-text-description {
+  position: absolute;
+  top: 22%; 
+  left: 11%; 
+  color: white;
+  padding: 10px;
+  background-color: rgb(0 0 0 / 0.4); 
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  /* font-weight: bolder; */
+}
+
+.overlay-text-team {
+  position: absolute; /* Positions the text relative to the container */
+  top: 42%; 
+  left: 11%; 
+  color: white;
+  padding: 10px;
+  background-color: rgb(0 0 0 / 0);
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+.team_member {
+  position: absolute; /* Positions the text relative to the container */
+  top: 43%; 
+  left: 33%; 
+  color: white;
+  padding: 10px;
+  background-color: rgb(0 0 0 / 0.6);
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.team_member_img{
+  scale: 0.8;
+  /* transform: scale(0.8); */
+}
+
+.team_member h3 {
+  /* display: inline; */
+  margin-left: 35px;
+}
+
+.title {
+  /* display: grid;
+  place-items: center; */
+  line-height: 40px;
+  text-align: center;
+  font-size: 25px;
+  background-color: #4795bf;
+  border-radius: 7px;
+  height: 40px;
+}
+
+.social-media {
+  position: absolute; 
+  top: 35%;
+  left: 3%;
+  color: white; 
+  padding: 1px;
+  width: 60px;
+  height: auto;
+  /* background-color: black; */
+}
+
+.social-media-img {
+  margin-bottom: 20px;
+  width: 25px;
+  height: auto;
+  border-radius: 11px;
+  opacity: 0.8;
+}
+
+.overlay-button {
+  width: 10%;
+  height: 5%;
+  position: absolute; 
+  top: 60%; 
+  left: 12%; 
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 15px;
+}
