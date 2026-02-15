@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #2f3630;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img.logo-img {
+    width: 50px;
+    height: auto;
+}
+
+nav h1 {
+    margin: 5px 550px 5px 15px;
+    color: white;
+    font-style: italic;
+}
+  
+nav ul {
+  list-style-type: none;
+  /* padding: 0; */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+ul#links {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  margin-right: 630px;
+}
+
+button {
+    background-color: #3c8278;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+    width: 550px;
+    justify-self: center;
+}
+
+button:hover {
+  background-color: #2e5939;
+}
+
+.image-container {
+  position: relative; /* Makes the container the reference point for absolute positioning */
+  display: inline-block; /*Helps wrap the container around the image */
+}
+
+.image-container img {
+  display: block;
+  width: 100%; /* Ensures the image is responsive within the container */
+  height: auto;
+}
+
+.overlay-text-contact {
+  position: absolute; /* Positions the text relative to the container */
+  top: 20%; 
+  left: 15%; 
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  padding: 10px;
+  background-color: rgb(0 0 0 / 0);
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bolder;
+}
+
+#overlay-contactForm {
+  position: absolute;
+  top: 20%; 
+  left: 60%; 
+  color: white;
+  padding: 10px;
+  background-color: rgb(0 0 0 / 0.4); 
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  border-radius: 15px;
+  width: 600px;
+}
+
+#overlay-contactForm div {
+  padding: 5px;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px 0;
+  width: 550px;
+  background-color: rgb(0 0 0 / 0.3);
+  justify-self: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#message {
+  resize: none;
+}
+
+label {
+  margin-left: 13px;
+}
+
+.social-media {
+  position: absolute; 
+  top: 35%;
+  left: 3%;
+  color: white; 
+  padding: 1px;
+  width: 60px;
+  height: auto;
+  /* background-color: black; */
+}
+
+.social-media-img {
+  margin-bottom: 20px;
+  width: 25px;
+  height: auto;
+  border-radius: 11px;
+  opacity: 0.8;
+}
+
+.overlay-button {
+  width: 10%;
+  height: 5%;
+  position: absolute; 
+  top: 60%; 
+  left: 12%; 
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 15px;
+}
