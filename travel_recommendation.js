@@ -31,14 +31,16 @@ function searchDestination() {
             for(let city of item.cities) {
               resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="destination">`;
               resultDiv.innerHTML += `<h2>${city.name}</h2>`;
-              resultDiv.innerHTML += `<p>${city.description}</p><br>`;
+              resultDiv.innerHTML += `<p>${city.description}</p>`;
+              resultDiv.innerHTML += `<button>Visit</button><br>`;
             }
           });
         } else {
             data[destination].forEach(item => {
               resultDiv.innerHTML += `<img src="${item.imageUrl}" alt="destination">`;
               resultDiv.innerHTML += `<h2>${item.name}</h2>`;
-              resultDiv.innerHTML += `<p>${item.description}</p><br>`;
+              resultDiv.innerHTML += `<p>${item.description}</p>`;
+              resultDiv.innerHTML += `<button>Visit</button><br>`;
             });
         }
       } else {
@@ -50,9 +52,6 @@ function searchDestination() {
       console.error('Error:', error);
       resultDiv.innerHTML = 'An error occurred while fetching data.';
     });
-
-
-
 }
 
 function clearResults() {

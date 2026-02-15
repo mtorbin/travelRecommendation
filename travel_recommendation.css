@@ -170,6 +170,6 @@ button:hover {
   max-height: 750px;
 }
 
-#result h2, p, img {
+#result h2, p, img, button {
   margin-bottom: 10px;
 }
