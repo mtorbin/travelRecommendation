@@ -2,6 +2,8 @@ const input = document.querySelector('#destinationInput');
 const btnSearch = document.querySelector('#btnSearch');
 const btnClear = document.querySelector('#btnClear');
 const resultDiv = document.querySelector('#result');
+resultDiv.style.visibility = 'hidden';
+
 const destinations = { 
   country: 'countries',
   countries: 'countries',
@@ -12,10 +14,8 @@ const destinations = {
 };
 
 function searchDestination() {
+  resultDiv.style.visibility = 'visible';
   const inputText = input.value.toLowerCase();
-  // console.log(inputText);
-  // resultDiv.innerHTML = inputText;
-
 
   fetch('travel_recommendation_api.json')
     .then(response => response.json())
@@ -25,25 +25,27 @@ function searchDestination() {
         destination = destinations[inputText];
       } else { destination = false; }
       
-      // const condition = data.conditions.find(item => item.name.toLowerCase() === input);
-
       if (destination) {
-        
-
-        // const symptoms = condition.symptoms.join(', ');
-        // const prevention = condition.prevention.join(', ');
-        // const treatment = condition.treatment;
-
-        resultDiv.innerHTML = `<h2>${data[destination][0].name}</h2>`;
-        // resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
-
-        // resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
-        // resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
-        // resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
+        if(destination === 'countries') {
+          data[destination].forEach(item => {
+            for(let city of item.cities) {
+              resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="destination">`;
+              resultDiv.innerHTML += `<h2>${city.name}</h2>`;
+              resultDiv.innerHTML += `<p>${city.description}</p><br>`;
+            }
+          });
+        } else {
+            data[destination].forEach(item => {
+              resultDiv.innerHTML += `<img src="${item.imageUrl}" alt="destination">`;
+              resultDiv.innerHTML += `<h2>${item.name}</h2>`;
+              resultDiv.innerHTML += `<p>${item.description}</p><br>`;
+            });
+        }
       } else {
         resultDiv.innerHTML = 'Destination not found.';
       }
     })
+
     .catch(error => {
       console.error('Error:', error);
       resultDiv.innerHTML = 'An error occurred while fetching data.';
@@ -53,5 +55,12 @@ function searchDestination() {
 
 }
 
+function clearResults() {
+  resultDiv.style.visibility = 'hidden';
+  input.value = '';
+  resultDiv.innerHTML = '';
+}
+
 btnSearch.addEventListener('click', searchDestination);
+btnClear.addEventListener('click', clearResults);
 
