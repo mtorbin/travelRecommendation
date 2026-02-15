@@ -34,8 +34,7 @@ function searchDestination() {
         // const prevention = condition.prevention.join(', ');
         // const treatment = condition.treatment;
 
-        // resultDiv.innerHTML = `<h2>${data.destination[0].name}</h2>`;
-        resultDiv.innerHTML = `<h2>${data}</h2>`;
+        resultDiv.innerHTML = `<h2>${data[destination][0].name}</h2>`;
         // resultDiv.innerHTML += `<img src="${condition.imagesrc}" alt="hjh">`;
 
         // resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
