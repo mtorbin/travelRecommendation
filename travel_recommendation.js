@@ -32,7 +32,7 @@ function searchDestination() {
               resultDiv.innerHTML += `<img src="${city.imageUrl}" alt="destination">`;
               resultDiv.innerHTML += `<h2>${city.name}</h2>`;
               resultDiv.innerHTML += `<p>${city.description}</p>`;
-              resultDiv.innerHTML += `<button>Visit</button><br>`;
+              resultDiv.innerHTML += `<button>Visit</button><br><br>`;
             }
           });
         } else {
@@ -40,7 +40,7 @@ function searchDestination() {
               resultDiv.innerHTML += `<img src="${item.imageUrl}" alt="destination">`;
               resultDiv.innerHTML += `<h2>${item.name}</h2>`;
               resultDiv.innerHTML += `<p>${item.description}</p>`;
-              resultDiv.innerHTML += `<button>Visit</button><br>`;
+              resultDiv.innerHTML += `<button>Visit</button><br><br>`;
             });
         }
       } else {
